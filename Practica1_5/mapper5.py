@@ -3,6 +3,7 @@ from datetime import datetime
 import sys
 
 import enum
+
 n = 0
 
 for line in csv.reader(sys.stdin):
