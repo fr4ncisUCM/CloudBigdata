@@ -5,6 +5,6 @@ import sys
 import enum
 
 for line in sys.stdin:
-    idFilm, rat, rest = line.split("$")
+    data = line.split()
 
-    print(rat + "\t" + idFilm)
+    print(data[1] + "\t" + data[0])

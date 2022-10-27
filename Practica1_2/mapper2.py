@@ -29,7 +29,7 @@ for line in sys.stdin:
             file,line = line.split("POST ")
             line,trash = line.split(" ",1)
             trash2,trash3 = trash.split(" ",1)
-            line = line+ " "+trash2[:-1]
+            line = line+ " " + trash2[:-1]
             
             print(line)
         

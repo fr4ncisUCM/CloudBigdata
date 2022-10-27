@@ -18,22 +18,22 @@ NumDays = 0
 actual = None
 
 for line in sys.stdin:
-    actual = line.split(",")[0]
+    actual = line.split("\t")[0]
     # Have to ignore the first row
     if last == None : # Check year
         last = actual
     
     if last != actual:         
-        print(last+" "+str(BufferDay/NumDays))
+        print(last+"\t"+str(BufferDay/NumDays))
         last = actual
         BufferDay = 0
         NumDays = 1
-        BufferDay += float(line.split(",")[1])
+        BufferDay += float(line.split("\t")[1])
     else:
         # Doesn't work bc the notacion with points don't fit with integer
-        BufferDay += float(line.split(",")[1])
+        BufferDay += float(line.split("\t")[1])
         NumDays+=1
         
 if last == actual:         
-    print(last+" "+str(BufferDay/NumDays))
+    print(last+"\t"+str(BufferDay/NumDays))
    

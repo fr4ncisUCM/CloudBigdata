@@ -22,7 +22,7 @@ for line in sys.stdin:
         last = actualFilm
 
     if last != actualFilm:
-        print(last + "$" + str(float(BufferRating / NumVal))+"$-")
+        print(last + "\t" + str(float(BufferRating / NumVal)))
         last = actualFilm
         BufferRating = 0
         NumVal = 1
@@ -32,4 +32,4 @@ for line in sys.stdin:
         NumVal += 1
 
 if last == actualFilm:
-    print(last + "$" + str(BufferRating / NumVal)+"$-")
+    print(last + "\t" + str(BufferRating / NumVal))
